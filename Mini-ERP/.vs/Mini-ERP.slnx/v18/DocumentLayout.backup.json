@@ -1,12 +1,37 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "C:\\Users\\cadua\\Desktop\\Mini-ERP\\Mini-ERP\\",
-  "Documents": [],
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{656EDC95-E716-179E-837A-6D73C9212573}|Mini-ERP\\Mini-ERP.csproj|c:\\users\\cadua\\desktop\\mini-erp\\mini-erp\\mini-erp\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{656EDC95-E716-179E-837A-6D73C9212573}|Mini-ERP\\Mini-ERP.csproj|solutionrelative:mini-erp\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
       "VerticalTabListWidth": 256,
-      "DocumentGroups": []
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\cadua\\Desktop\\Mini-ERP\\Mini-ERP\\Mini-ERP\\Program.cs",
+              "RelativeDocumentMoniker": "Mini-ERP\\Program.cs",
+              "ToolTip": "C:\\Users\\cadua\\Desktop\\Mini-ERP\\Mini-ERP\\Mini-ERP\\Program.cs",
+              "RelativeToolTip": "Mini-ERP\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAAXAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-14T23:35:09.48Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
     }
   ]
 }
