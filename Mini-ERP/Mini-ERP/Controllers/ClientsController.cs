@@ -1,5 +1,4 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore;
 using Mini_ERP.Data.Models;
 using MiniERP.Application.Interfaces.Services;
 
@@ -17,23 +16,28 @@ public class ClientsController : ControllerBase
         _clientService = clientService;
     }
 
-    //[HttpGet]
-    //public async Task<ActionResult<IEnumerable<Client>>> GetClients() 
-    //{ 
-    //    return await _context.Clients.ToListAsync();
-    //}
+    [HttpGet]
+    public async Task<ActionResult<IEnumerable<Client>>> GetClients()
+    {
+        var result = await _clientService.GetAllClientsAsync();
+        return Ok(result);
 
-    //[HttpGet("{id}")]
-    //public async Task<ActionResult<Client>> GetClient(int id) 
-    //{
-    //    var client = await _context.Clients.FindAsync(id);
+    }
 
-    //    if (client == null)
-    //    {
-    //        return NotFound("Cliente não encontrado.");
-    //    }
-    //    return client;
-    //}
+    [HttpGet("{id}")]
+    public async Task<ActionResult<Client?>> GetClient(int id)
+    {
+        try
+        {
+            var result = await _clientService.GetClientByIdAsync(id);
+
+            return Ok(result);
+        }
+        catch (Exception ex)
+        {
+            return NotFound(ex.Message);//not found não faz sentido
+        }
+    }
 
     [HttpPost]
     public async Task<ActionResult<int>> PostClient(Client client)
@@ -43,51 +47,44 @@ public class ClientsController : ControllerBase
         return result.Id;
     }
 
-    //[HttpPut("{id}")]
-    //public async Task<IActionResult> PutClient(int id, Client client)
-    //{
-    //    if (id != client.Id)
-    //    {
-    //        return BadRequest("O ID informado não confere");
-    //    }
-    //    _context.Entry(client).State = EntityState.Modified;
+    [HttpPut("{id}")]
+    public async Task<IActionResult> PutClient(int id, Client client)
+    {
+        try
+        {
+            var result = await _clientService.PutClientAsync(id, client);
+            return Ok(result);
+        }
+        catch (KeyNotFoundException ex) // Erros não fazem sentidos
+        {
+            return NotFound(ex.Message);
+        }
+        catch (Exception ex) // Erros não fazem sentidos
+        {
+            return BadRequest(ex.Message);
+        }
 
-    //    try
-    //    {
-    //        await _context.SaveChangesAsync();
-    //    }
-    //    catch (DbUpdateConcurrencyException)
-    //    {
-    //        if (!_context.Clients.Any(e => e.Id == id))
-    //        {
-    //            return NotFound("Cliente não encontrado.");
+    }
 
-    //        }
-    //        else
-    //        {
-    //            throw;
-    //        }
-    //    }
-    //    return NoContent();
-    //}
+    [HttpDelete("{id}")]
+    public async Task<IActionResult> DeleteClient(int id)
+    {
+        try
+        {
+            await _clientService.DeleteClientAsync(id);
 
-    //[HttpDelete("{id}")]
-    //public async Task<IActionResult> DeleteClient(int id)
-    //{
-    //    var client = await _context.Clients.FindAsync(id);
-    //    if (client == null)
-    //    {
-    //        return NotFound("Cliente não encontrado.");
-    //    }
-    //    _context.Clients.Remove(client);
-    //    await _context.SaveChangesAsync();
+            return NoContent();
+        }
 
-    //    return NoContent();
-    //}
+        catch (Exception ex) // Erros não fazem sentidos
+        {
+            return NotFound(ex.Message);
+        }
+
+    }
 
 }
 
-    
-    
-        
- 
+
+
+

@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("MiniERP.Application")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+af820a35f6ecec856a693be6e63e04a709845b3d")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+00171f146eedbbbf8b18452cfe7d6eca2f7fe371")]
 [assembly: System.Reflection.AssemblyProductAttribute("MiniERP.Application")]
 [assembly: System.Reflection.AssemblyTitleAttribute("MiniERP.Application")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
