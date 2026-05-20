@@ -1,0 +1,15 @@
+C:\Users\cadua\Desktop\Mini-ERP\Mini-ERP\MiniERP.Data\bin\Debug\net10.0\MiniERP.Data.deps.json
+C:\Users\cadua\Desktop\Mini-ERP\Mini-ERP\MiniERP.Data\bin\Debug\net10.0\MiniERP.Data.runtimeconfig.json
+C:\Users\cadua\Desktop\Mini-ERP\Mini-ERP\MiniERP.Data\bin\Debug\net10.0\MiniERP.Data.dll
+C:\Users\cadua\Desktop\Mini-ERP\Mini-ERP\MiniERP.Data\bin\Debug\net10.0\MiniERP.Data.pdb
+C:\Users\cadua\Desktop\Mini-ERP\Mini-ERP\MiniERP.Data\obj\Debug\net10.0\MiniERP.Data.csproj.AssemblyReference.cache
+C:\Users\cadua\Desktop\Mini-ERP\Mini-ERP\MiniERP.Data\obj\Debug\net10.0\MiniERP.Data.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\cadua\Desktop\Mini-ERP\Mini-ERP\MiniERP.Data\obj\Debug\net10.0\MiniERP.Data.AssemblyInfoInputs.cache
+C:\Users\cadua\Desktop\Mini-ERP\Mini-ERP\MiniERP.Data\obj\Debug\net10.0\MiniERP.Data.AssemblyInfo.cs
+C:\Users\cadua\Desktop\Mini-ERP\Mini-ERP\MiniERP.Data\obj\Debug\net10.0\MiniERP.Data.csproj.CoreCompileInputs.cache
+C:\Users\cadua\Desktop\Mini-ERP\Mini-ERP\MiniERP.Data\obj\Debug\net10.0\MiniERP.Data.sourcelink.json
+C:\Users\cadua\Desktop\Mini-ERP\Mini-ERP\MiniERP.Data\obj\Debug\net10.0\MiniERP.Data.dll
+C:\Users\cadua\Desktop\Mini-ERP\Mini-ERP\MiniERP.Data\obj\Debug\net10.0\refint\MiniERP.Data.dll
+C:\Users\cadua\Desktop\Mini-ERP\Mini-ERP\MiniERP.Data\obj\Debug\net10.0\MiniERP.Data.pdb
+C:\Users\cadua\Desktop\Mini-ERP\Mini-ERP\MiniERP.Data\obj\Debug\net10.0\MiniERP.Data.genruntimeconfig.cache
+C:\Users\cadua\Desktop\Mini-ERP\Mini-ERP\MiniERP.Data\obj\Debug\net10.0\ref\MiniERP.Data.dll

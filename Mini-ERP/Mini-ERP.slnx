@@ -1,3 +1,5 @@
 <Solution>
+  <Project Path="Application/MiniERP.Application.csproj" Id="c9d9024b-4576-447f-a67b-d1d5271d1d05" />
   <Project Path="Mini-ERP/Mini-ERP.csproj" />
+  <Project Path="MiniERP.Data/MiniERP.Data.csproj" Id="77c962e0-91f1-4fcc-a4d4-608883324d47" />
 </Solution>

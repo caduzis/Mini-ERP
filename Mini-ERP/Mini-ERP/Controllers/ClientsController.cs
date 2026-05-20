@@ -1,7 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
-using Mini_ERP.Data;
-using Mini_ERP.Models;
+using Mini_ERP.Data.Models;
+using MiniERP.Application.Interfaces.Services;
 
 namespace Mini_ERP.Controllers;
 
@@ -10,81 +10,80 @@ namespace Mini_ERP.Controllers;
 
 public class ClientsController : ControllerBase
 {
-    private readonly AppDbContext _context;
+    private readonly IClientService _clientService;
 
-    public ClientsController(AppDbContext context)
+    public ClientsController(IClientService clientService)
     {
-        _context = context;
+        _clientService = clientService;
     }
 
-    [HttpGet]
-    public async Task<ActionResult<IEnumerable<Client>>> GetClients() 
-    { 
-        return await _context.Clients.ToListAsync();
-    }
+    //[HttpGet]
+    //public async Task<ActionResult<IEnumerable<Client>>> GetClients() 
+    //{ 
+    //    return await _context.Clients.ToListAsync();
+    //}
 
-    [HttpGet("{id}")]
-    public async Task<ActionResult<Client>> GetClient(int id) 
-    {
-        var client = await _context.Clients.FindAsync(id);
+    //[HttpGet("{id}")]
+    //public async Task<ActionResult<Client>> GetClient(int id) 
+    //{
+    //    var client = await _context.Clients.FindAsync(id);
 
-        if (client == null)
-        {
-            return NotFound("Cliente não encontrado.");
-        }
-        return client;
-    }
+    //    if (client == null)
+    //    {
+    //        return NotFound("Cliente não encontrado.");
+    //    }
+    //    return client;
+    //}
 
     [HttpPost]
-    public async Task<ActionResult<Client>> PostClient(Client client)
+    public async Task<ActionResult<int>> PostClient(Client client)
     {
-        _context.Clients.Add(client);
-        await _context.SaveChangesAsync();
+        var result = await _clientService.AddClientAsync(client);
 
-        return CreatedAtAction(nameof(GetClient), new { id = client.Id }, client);
+        return result.Id;
     }
 
-    [HttpPut("{id}")]
-    public async Task<IActionResult> PutClient(int id, Client client)
-    {
-        if (id != client.Id)
-        {
-            return BadRequest("O ID informado não confere");
-        }
-        _context.Entry(client).State = EntityState.Modified;
+    //[HttpPut("{id}")]
+    //public async Task<IActionResult> PutClient(int id, Client client)
+    //{
+    //    if (id != client.Id)
+    //    {
+    //        return BadRequest("O ID informado não confere");
+    //    }
+    //    _context.Entry(client).State = EntityState.Modified;
 
-        try
-        {
-            await _context.SaveChangesAsync();
-        }
-        catch (DbUpdateConcurrencyException)
-        {
-            if (!_context.Clients.Any(e => e.Id == id))
-            {
-                return NotFound("Cliente não encontrado.");
+    //    try
+    //    {
+    //        await _context.SaveChangesAsync();
+    //    }
+    //    catch (DbUpdateConcurrencyException)
+    //    {
+    //        if (!_context.Clients.Any(e => e.Id == id))
+    //        {
+    //            return NotFound("Cliente não encontrado.");
 
-            }
-            else
-            {
-                throw;
-            }
-        }
-        return NoContent();
-    }
+    //        }
+    //        else
+    //        {
+    //            throw;
+    //        }
+    //    }
+    //    return NoContent();
+    //}
 
-    [HttpDelete("{id}")]
-    public async Task<IActionResult> DeleteClient(int id)
-    {
-        var client = await _context.Clients.FindAsync(id);
-        if (client == null)
-        {
-            return NotFound("Cliente não encontrado.");
-        }
-        _context.Clients.Remove(client);
-        await _context.SaveChangesAsync();
+    //[HttpDelete("{id}")]
+    //public async Task<IActionResult> DeleteClient(int id)
+    //{
+    //    var client = await _context.Clients.FindAsync(id);
+    //    if (client == null)
+    //    {
+    //        return NotFound("Cliente não encontrado.");
+    //    }
+    //    _context.Clients.Remove(client);
+    //    await _context.SaveChangesAsync();
 
-        return NoContent();
-    }
+    //    return NoContent();
+    //}
 
 }
 
