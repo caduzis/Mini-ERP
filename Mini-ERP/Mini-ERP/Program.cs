@@ -3,6 +3,7 @@ using Mini_ERP.Data;
 using MiniERP.Application.Interfaces.Services;
 using MiniERP.Application.Services;
 using MiniERP.Data.Repository;
+using MiniERP.Data.Repositorý;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -14,6 +15,8 @@ builder.Services.AddControllers();
 builder.Services.AddOpenApi();
 builder.Services.AddScoped<IClientService, ClientService>();
 builder.Services.AddScoped<IClientRepository, ClientRepository>();
+builder.Services.AddScoped<IProductRepository, ProductRepository>();
+builder.Services.AddScoped<IProductService, ProductService>();
 
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();

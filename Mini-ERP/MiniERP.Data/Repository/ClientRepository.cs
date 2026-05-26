@@ -65,7 +65,6 @@ public class ClientRepository : IClientRepository
             }
         }
         return result.Entity;
-
     }
 
     public async Task<Client> DeleteClientAsync(Client client)
@@ -75,7 +74,5 @@ public class ClientRepository : IClientRepository
         await _context.SaveChangesAsync();
         
         return client;
-        
     }
-
 }

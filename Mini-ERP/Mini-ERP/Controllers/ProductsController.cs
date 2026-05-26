@@ -1,4 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using Mini_ERP.Data.Models;
+using MiniERP.Application.Interfaces.Services;
 
 namespace Mini_ERP.Controllers;
 
@@ -6,78 +8,71 @@ namespace Mini_ERP.Controllers;
 [ApiController]
 public class ProductsController : ControllerBase
 {
-    //private readonly AppDbContext _context;
+    private readonly IProductService _productService;
 
-    //public ProductsController(AppDbContext context)
-    //{
-    //    _context = context;
-    //}
+    public ProductsController(IProductService productService)
+    {
+        _productService = productService;
+    }
 
-    //[HttpGet]
-    //public async Task<ActionResult<IEnumerable<Product>>> GetProducts()
-    //{
-    //    return await _context.Products.ToListAsync();
-    //}
+    [HttpGet]
+    public async Task<ActionResult<IEnumerable<Product>>> GetProducts()
+    {
+        var result = await _productService.GetAllProductsAsync();
+        return Ok(result);
+    }
 
-    //[HttpGet("{id}")]
-    //public async Task<ActionResult<Product>> GetProduct(int id)
-    //{
-    //    var product = await _context.Products.FindAsync(id);
+    [HttpGet("{id}")]
+    public async Task<ActionResult<int>> GetProductbyId(int id)
+    {
+        try
+        {
+            var result = await _productService.GetProductByIdAsync(id);
+            return Ok(result);
+        }
+        catch (Exception ex) // Erros não fazem sentidos
+        {
+            return NotFound(ex.Message); 
+        }
+    }
 
-    //    if (product == null)
-    //    {
-    //        return NotFound("Produto não encontrado no estoque.");
-    //    }
-    //    return product;
-    //}
+    [HttpPost]
+    public async Task<ActionResult<int>> PostProduct(Product product)
+    {
+        var result = await _productService.AddProductAsync(product);
 
-    //[HttpPost]
-    //public async Task<ActionResult<Product>> PostProduct(Product product)
-    //{
-    //    _context.Products.Add(product);
-    //    await _context.SaveChangesAsync();
+        return result.Id;
+    }
 
-    //    return CreatedAtAction(nameof(GetProduct), new { id = product.Id }, product);
-    //}
+    [HttpPut("{id}")]
+    public async Task<IActionResult> PutProduct(int id, Product product)
+    {
+        try
+        {
+            var result = await _productService.PutProductAsync(id, product);
+            return Ok(result);
+        }
+        catch (KeyNotFoundException ex) // Erros não fazem sentidos
+        {
+            return NotFound(ex.Message); 
+        }
+        catch (Exception ex)    // Erros não fazem sentidos
+        {
+            return BadRequest(ex.Message); 
+        }
+    }
 
-    //[HttpPut("{id}")]
-    //public async Task<IActionResult> PutProduct(int id, Product product)
-    //{
-    //    if (id != product.Id)
-    //    {
-    //        return BadRequest("O ID do produto informado não confere");
-    //    }
-
-    //    try
-    //    {
-    //        await _context.SaveChangesAsync();
-    //    }
-    //    catch (DbUpdateConcurrencyException)
-    //    {
-    //        if (!_context.Products.Any(e => e.Id == id))
-    //        {
-    //            return NotFound();
-    //        }
-    //        else
-    //        {
-    //            throw;
-    //        }
-    //    }
-    //    return NoContent();
-    //}
-
-    //[HttpDelete("{id}")]
-    //public async Task<IActionResult> DeleteProduct(int id)
-    //{
-    //    var product = await _context.Products.FindAsync(id);
-    //    if (product == null)
-    //    {
-    //        return NotFound();
-    //    }
-
-    //    _context.Products.Remove(product);
-    //    await _context.SaveChangesAsync();
-
-    //    return NoContent();
-    //}
+    [HttpDelete("{id}")]
+    public async Task<IActionResult> DeleteProduct(int id)
+    {
+        try
+        {
+            await _productService.DeleteProductAsync(id);
+            return NoContent();
+        }
+        catch (Exception ex) // Erros não fazem sentidos
+        {
+            return NotFound(ex.Message);
+        }
+    }
 }

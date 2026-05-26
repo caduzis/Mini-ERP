@@ -3,8 +3,16 @@
   "WorkspaceRootPath": "C:\\Users\\cadua\\Desktop\\Mini-ERP\\Mini-ERP\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{77C962E0-91F1-4FCC-A4D4-608883324D47}|MiniERP.Data\\MiniERP.Data.csproj|c:\\users\\cadua\\desktop\\mini-erp\\mini-erp\\minierp.data\\repository\\clientrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{77C962E0-91F1-4FCC-A4D4-608883324D47}|MiniERP.Data\\MiniERP.Data.csproj|solutionrelative:minierp.data\\repository\\clientrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{656EDC95-E716-179E-837A-6D73C9212573}|Mini-ERP\\Mini-ERP.csproj|c:\\users\\cadua\\desktop\\mini-erp\\mini-erp\\mini-erp\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{656EDC95-E716-179E-837A-6D73C9212573}|Mini-ERP\\Mini-ERP.csproj|solutionrelative:mini-erp\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C9D9024B-4576-447F-A67B-D1D5271D1D05}|Application\\MiniERP.Application.csproj|c:\\users\\cadua\\desktop\\mini-erp\\mini-erp\\application\\services\\productservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C9D9024B-4576-447F-A67B-D1D5271D1D05}|Application\\MiniERP.Application.csproj|solutionrelative:application\\services\\productservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C9D9024B-4576-447F-A67B-D1D5271D1D05}|Application\\MiniERP.Application.csproj|c:\\users\\cadua\\desktop\\mini-erp\\mini-erp\\application\\interfaces\\services\\iproductservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C9D9024B-4576-447F-A67B-D1D5271D1D05}|Application\\MiniERP.Application.csproj|solutionrelative:application\\interfaces\\services\\iproductservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -13,20 +21,47 @@
       "VerticalTabListWidth": 256,
       "DocumentGroups": [
         {
-          "DockedWidth": 470,
-          "SelectedChildIndex": 0,
+          "DockedWidth": 401,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "ClientRepository.cs",
-              "DocumentMoniker": "C:\\Users\\cadua\\Desktop\\Mini-ERP\\Mini-ERP\\MiniERP.Data\\Repository\\ClientRepository.cs",
-              "RelativeDocumentMoniker": "MiniERP.Data\\Repository\\ClientRepository.cs",
-              "ToolTip": "C:\\Users\\cadua\\Desktop\\Mini-ERP\\Mini-ERP\\MiniERP.Data\\Repository\\ClientRepository.cs",
-              "RelativeToolTip": "MiniERP.Data\\Repository\\ClientRepository.cs",
-              "ViewState": "AgIAABcAAAAAAAAAAAAuwCsAAAAIAAAAAAAAAA==",
+              "DocumentIndex": 1,
+              "Title": "ProductService.cs",
+              "DocumentMoniker": "C:\\Users\\cadua\\Desktop\\Mini-ERP\\Mini-ERP\\Application\\Services\\ProductService.cs",
+              "RelativeDocumentMoniker": "Application\\Services\\ProductService.cs",
+              "ToolTip": "C:\\Users\\cadua\\Desktop\\Mini-ERP\\Mini-ERP\\Application\\Services\\ProductService.cs",
+              "RelativeToolTip": "Application\\Services\\ProductService.cs",
+              "ViewState": "AgIAACgAAAAAAAAAAAAcwDsAAABNAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-20T02:43:50.121Z",
+              "WhenOpened": "2026-05-23T15:28:34.07Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\cadua\\Desktop\\Mini-ERP\\Mini-ERP\\Mini-ERP\\Program.cs",
+              "RelativeDocumentMoniker": "Mini-ERP\\Program.cs",
+              "ToolTip": "C:\\Users\\cadua\\Desktop\\Mini-ERP\\Mini-ERP\\Mini-ERP\\Program.cs",
+              "RelativeToolTip": "Mini-ERP\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAA+AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-23T15:33:27.033Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "IProductService.cs",
+              "DocumentMoniker": "C:\\Users\\cadua\\Desktop\\Mini-ERP\\Mini-ERP\\Application\\Interfaces\\Services\\IProductService.cs",
+              "RelativeDocumentMoniker": "Application\\Interfaces\\Services\\IProductService.cs",
+              "ToolTip": "C:\\Users\\cadua\\Desktop\\Mini-ERP\\Mini-ERP\\Application\\Interfaces\\Services\\IProductService.cs",
+              "RelativeToolTip": "Application\\Interfaces\\Services\\IProductService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAtAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-23T15:29:46.34Z",
               "EditorCaption": ""
             }
           ]

@@ -12,7 +12,7 @@ public class ClientService : IClientService
     {
         _clientRepository = clientRepository;
     }
-    
+
     public async Task<IEnumerable<Client>> GetAllClientsAsync()
     {
         var response = await _clientRepository.GetAllClientsAsync();
@@ -57,8 +57,7 @@ public class ClientService : IClientService
         var updatedClient = await _clientRepository.PutClientAsync(existingClient);
 
         return existingClient;
-        
-        }
+    }
 
     public async Task<Client> DeleteClientAsync(int id)
     {

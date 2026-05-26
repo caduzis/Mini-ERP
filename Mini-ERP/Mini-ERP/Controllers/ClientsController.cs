@@ -21,16 +21,14 @@ public class ClientsController : ControllerBase
     {
         var result = await _clientService.GetAllClientsAsync();
         return Ok(result);
-
     }
 
     [HttpGet("{id}")]
-    public async Task<ActionResult<Client?>> GetClient(int id)
+    public async Task<ActionResult<Client?>> GetClientbyId(int id)
     {
         try
         {
             var result = await _clientService.GetClientByIdAsync(id);
-
             return Ok(result);
         }
         catch (Exception ex)
@@ -43,7 +41,6 @@ public class ClientsController : ControllerBase
     public async Task<ActionResult<int>> PostClient(Client client)
     {
         var result = await _clientService.AddClientAsync(client);
-
         return result.Id;
     }
 
@@ -63,7 +60,6 @@ public class ClientsController : ControllerBase
         {
             return BadRequest(ex.Message);
         }
-
     }
 
     [HttpDelete("{id}")]
@@ -72,19 +68,11 @@ public class ClientsController : ControllerBase
         try
         {
             await _clientService.DeleteClientAsync(id);
-
             return NoContent();
         }
-
         catch (Exception ex) // Erros não fazem sentidos
         {
             return NotFound(ex.Message);
         }
-
     }
-
 }
-
-
-
-
