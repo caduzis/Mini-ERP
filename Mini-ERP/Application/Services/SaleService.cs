@@ -53,8 +53,8 @@ public class SaleService  : ISaleService
             }
             item.UnitPrice = product.Price;
             sale.TotalAmount += (item.Quantity * item.UnitPrice);
-            
-            
+            product.StockQuantity = product.StockQuantity - item.Quantity;
+
         }
         var response = await _saleRepository.AddSaleAsync(sale);
         return response;

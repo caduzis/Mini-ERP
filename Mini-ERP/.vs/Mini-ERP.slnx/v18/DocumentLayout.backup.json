@@ -3,8 +3,8 @@
   "WorkspaceRootPath": "C:\\Users\\cadua\\Desktop\\Mini-ERP\\Mini-ERP\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\cadua\\Desktop\\Mini-ERP\\Mini-ERP\\MiniERP.Data\\Migrations\\20260527161928_NewFix.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:MiniERP.Data\\Migrations\\20260527161928_NewFix.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{C9D9024B-4576-447F-A67B-D1D5271D1D05}|Application\\MiniERP.Application.csproj|c:\\users\\cadua\\desktop\\mini-erp\\mini-erp\\application\\services\\saleservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C9D9024B-4576-447F-A67B-D1D5271D1D05}|Application\\MiniERP.Application.csproj|solutionrelative:application\\services\\saleservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{77C962E0-91F1-4FCC-A4D4-608883324D47}|MiniERP.Data\\MiniERP.Data.csproj|c:\\users\\cadua\\desktop\\mini-erp\\mini-erp\\minierp.data\\models\\sale.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -19,10 +19,6 @@
       "RelativeMoniker": "D:0:0:{77C962E0-91F1-4FCC-A4D4-608883324D47}|MiniERP.Data\\MiniERP.Data.csproj|solutionrelative:minierp.data\\repository\\salesrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C9D9024B-4576-447F-A67B-D1D5271D1D05}|Application\\MiniERP.Application.csproj|c:\\users\\cadua\\desktop\\mini-erp\\mini-erp\\application\\services\\saleservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C9D9024B-4576-447F-A67B-D1D5271D1D05}|Application\\MiniERP.Application.csproj|solutionrelative:application\\services\\saleservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{656EDC95-E716-179E-837A-6D73C9212573}|Mini-ERP\\Mini-ERP.csproj|c:\\users\\cadua\\desktop\\mini-erp\\mini-erp\\mini-erp\\controllers\\salescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{656EDC95-E716-179E-837A-6D73C9212573}|Mini-ERP\\Mini-ERP.csproj|solutionrelative:mini-erp\\controllers\\salescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
@@ -34,7 +30,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 363,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Document",
@@ -44,23 +40,10 @@
               "RelativeDocumentMoniker": "MiniERP.Data\\Models\\Sale.cs",
               "ToolTip": "C:\\Users\\cadua\\Desktop\\Mini-ERP\\Mini-ERP\\MiniERP.Data\\Models\\Sale.cs",
               "RelativeToolTip": "MiniERP.Data\\Models\\Sale.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAlAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-05-26T23:08:15.724Z",
               "IsPinned": true,
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "20260527161928_NewFix.cs",
-              "DocumentMoniker": "C:\\Users\\cadua\\Desktop\\Mini-ERP\\Mini-ERP\\MiniERP.Data\\Migrations\\20260527161928_NewFix.cs",
-              "RelativeDocumentMoniker": "MiniERP.Data\\Migrations\\20260527161928_NewFix.cs",
-              "ToolTip": "C:\\Users\\cadua\\Desktop\\Mini-ERP\\Mini-ERP\\MiniERP.Data\\Migrations\\20260527161928_NewFix.cs",
-              "RelativeToolTip": "MiniERP.Data\\Migrations\\20260527161928_NewFix.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-27T16:19:28.226Z",
               "EditorCaption": ""
             },
             {
@@ -73,8 +56,7 @@
               "RelativeToolTip": "MiniERP.Data\\Repository\\SalesRepository.cs",
               "ViewState": "AgIAAA0AAAAAAAAAAAA1wBsAAAA7AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-27T15:23:30.177Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-05-27T15:23:30.177Z"
             },
             {
               "$type": "Document",
@@ -86,25 +68,24 @@
               "RelativeToolTip": "MiniERP.Data\\Repository\\ProductRepository.cs",
               "ViewState": "AgIAAA4AAAAAAAAAAAA9wCYAAAAWAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-27T15:17:49.68Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-05-27T15:17:49.68Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 0,
               "Title": "SaleService.cs",
               "DocumentMoniker": "C:\\Users\\cadua\\Desktop\\Mini-ERP\\Mini-ERP\\Application\\Services\\SaleService.cs",
               "RelativeDocumentMoniker": "Application\\Services\\SaleService.cs",
               "ToolTip": "C:\\Users\\cadua\\Desktop\\Mini-ERP\\Mini-ERP\\Application\\Services\\SaleService.cs",
               "RelativeToolTip": "Application\\Services\\SaleService.cs",
-              "ViewState": "AgIAAB4AAAAAAAAAAAAwwCsAAAAsAAAAAAAAAA==",
+              "ViewState": "AgIAABcAAAAAAAAAAAAgwDcAAABKAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-05-26T23:14:21.603Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 4,
               "Title": "SalesController.cs",
               "DocumentMoniker": "C:\\Users\\cadua\\Desktop\\Mini-ERP\\Mini-ERP\\Mini-ERP\\Controllers\\SalesController.cs",
               "RelativeDocumentMoniker": "Mini-ERP\\Controllers\\SalesController.cs",
@@ -112,8 +93,7 @@
               "RelativeToolTip": "Mini-ERP\\Controllers\\SalesController.cs",
               "ViewState": "AgIAADsAAAAAAAAAAAAIwAAAAAAfAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-26T22:35:17.51Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-05-26T22:35:17.51Z"
             }
           ]
         }
