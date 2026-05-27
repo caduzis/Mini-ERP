@@ -1,7 +1,6 @@
 ﻿using Mini_ERP.Data.Models;
 using MiniERP.Application.Interfaces.Services;
 using MiniERP.Data.Repository;
-using MiniERP.Data.Repositorý;
 
 namespace MiniERP.Application.Services;
 
@@ -68,6 +67,4 @@ public class ProductService : IProductService
         return toBeDeletedProduct;
 
     }
-
 }
-

@@ -11,8 +11,8 @@ using Mini_ERP.Data;
 namespace MiniERP.Data.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20260519233828_InitialCreate")]
-    partial class InitialCreate
+    [Migration("20260527161928_NewFix")]
+    partial class NewFix
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -81,8 +81,6 @@ namespace MiniERP.Data.Migrations
 
                     b.HasKey("Id");
 
-                    b.HasIndex("ClientId");
-
                     b.ToTable("Sales");
                 });
 
@@ -106,39 +104,18 @@ namespace MiniERP.Data.Migrations
 
                     b.HasKey("Id");
 
-                    b.HasIndex("ProductId");
-
                     b.HasIndex("SaleId");
 
                     b.ToTable("SaleItem");
                 });
 
-            modelBuilder.Entity("Mini_ERP.Data.Models.Sale", b =>
-                {
-                    b.HasOne("Mini_ERP.Data.Models.Client", "Client")
-                        .WithMany()
-                        .HasForeignKey("ClientId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("Client");
-                });
-
             modelBuilder.Entity("Mini_ERP.Data.Models.SaleItem", b =>
                 {
-                    b.HasOne("Mini_ERP.Data.Models.Product", "Product")
-                        .WithMany()
-                        .HasForeignKey("ProductId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
                     b.HasOne("Mini_ERP.Data.Models.Sale", null)
                         .WithMany("Items")
                         .HasForeignKey("SaleId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
-
-                    b.Navigation("Product");
                 });
 
             modelBuilder.Entity("Mini_ERP.Data.Models.Sale", b =>

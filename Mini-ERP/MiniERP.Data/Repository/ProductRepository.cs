@@ -5,7 +5,7 @@ using System.Collections.Generic;
 using System.Text;
 using Microsoft.EntityFrameworkCore;
 
-namespace MiniERP.Data.Repositorý;
+namespace MiniERP.Data.Repository;
 
 public interface IProductRepository
 {
@@ -28,6 +28,7 @@ public class ProductRepository : IProductRepository
 
     public async Task<IEnumerable<Product>> GetAllProductsAsync()
     {
+
         var result = await _context.Products.ToListAsync();
         return result;
     }
@@ -36,14 +37,12 @@ public class ProductRepository : IProductRepository
     {
         var result = await _context.Products.FindAsync(id);
         return result;
-
     }
 
     public async Task<Product> AddProductAsync(Product product)
     {
         var result = await _context.Products.AddAsync(product);
         await _context.SaveChangesAsync();
-
         return result.Entity;
     }
     

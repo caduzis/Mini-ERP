@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "E9SHYHOlrpk=",
+  "dgSpecHash": "p4lt4P2B9zc=",
   "success": true,
   "projectFilePath": "C:\\Users\\cadua\\Desktop\\Mini-ERP\\Mini-ERP\\Mini-ERP\\Mini-ERP.csproj",
   "expectedPackageFiles": [
@@ -21,6 +21,7 @@
     "C:\\Users\\cadua\\.nuget\\packages\\microsoft.entityframeworkcore.relational\\10.0.8\\microsoft.entityframeworkcore.relational.10.0.8.nupkg.sha512",
     "C:\\Users\\cadua\\.nuget\\packages\\microsoft.entityframeworkcore.sqlite\\10.0.8\\microsoft.entityframeworkcore.sqlite.10.0.8.nupkg.sha512",
     "C:\\Users\\cadua\\.nuget\\packages\\microsoft.entityframeworkcore.sqlite.core\\10.0.8\\microsoft.entityframeworkcore.sqlite.core.10.0.8.nupkg.sha512",
+    "C:\\Users\\cadua\\.nuget\\packages\\microsoft.entityframeworkcore.tools\\10.0.8\\microsoft.entityframeworkcore.tools.10.0.8.nupkg.sha512",
     "C:\\Users\\cadua\\.nuget\\packages\\microsoft.extensions.apidescription.server\\10.0.0\\microsoft.extensions.apidescription.server.10.0.0.nupkg.sha512",
     "C:\\Users\\cadua\\.nuget\\packages\\microsoft.extensions.dependencymodel\\10.0.8\\microsoft.extensions.dependencymodel.10.0.8.nupkg.sha512",
     "C:\\Users\\cadua\\.nuget\\packages\\microsoft.openapi\\2.4.1\\microsoft.openapi.2.4.1.nupkg.sha512",

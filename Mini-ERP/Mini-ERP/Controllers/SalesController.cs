@@ -1,76 +1,101 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore;
-using Mini_ERP.Data;
 using Mini_ERP.Data.Models;
+using MiniERP.Application.Interfaces.Services;
+using System;
+using System.Collections.Generic;
+using System.Threading.Tasks;
 
 namespace Mini_ERP.Controllers;
 
 [Route("api/[controller]")]
+[ApiController]
 public class SalesController : ControllerBase
 {
-    private readonly AppDbContext _context;
+    private readonly ISaleService _saleService;
 
-    public SalesController(AppDbContext context)
+    public SalesController(ISaleService saleService)
     {
-        _context = context;
+        _saleService = saleService;
     }
 
-//    [HttpGet]
-//    public async Task<ActionResult<IEnumerable<Sale>>> GetSales()
-//    {
-        
-//        return await _context.Sales
-//            .Include(s => s.Client)
-//            .Include(s => s.Items)
-//            .ThenInclude(i => i.Product)
-//            .ToListAsync();
-//    }
+    [HttpGet]
+    public async Task<ActionResult<IEnumerable<Sale>>> GetSales()
+    {
+        var result = await _saleService.GetAllSalesAsync();
+        return Ok(result);
+    }
 
-    
-//    [HttpPost]
-//    public async Task<ActionResult<Sale>> PostSale(Sale sale)
-//    {
-        
-//        sale.TotalAmount = 0;
-//        sale.SaleDate = DateTime.Now;
+    [HttpGet("{id}")]
+    public async Task<ActionResult<Sale>> GetSale(int id)
+    {
+        try
+        {
+            var result = await _saleService.GetSaleByIdAsync(id);
+            return Ok(result);
+        }
+        catch (KeyNotFoundException ex)
+        {
+            return NotFound(ex.Message);
+        }
+        catch (Exception ex)
+        {
+            return BadRequest(ex.Message);
+        }
+    }
 
-        
-//        var client = await _context.Clients.FindAsync(sale.ClientId);
-//        if (client == null)
-//        {
-//            return BadRequest("Cliente não encontrado.");
-//        }
+    [HttpPost]
+    public async Task<ActionResult<int>> PostSale(Sale sale)
+    {
+        try
+        {
+            var result = await _saleService.AddSaleAsync(sale);
 
-        
-//        foreach (var item in sale.Items)
-//        {
-            
-//            var product = await _context.Products.FindAsync(item.ProductId);
-//            if (product == null)
-//            {
-//                return BadRequest($"Produto com ID {item.ProductId} não encontrado.");
-//            }
+            return CreatedAtAction(nameof(GetSale), new { id = result.Id }, result);
+        }
+        catch (Exception ex)
+        {
+            return BadRequest(ex.Message);
+        }
+    }
 
-            
-//            if (product.StockQuantity < item.Quantity)
-//            {
-//                return BadRequest($"Estoque insuficiente para o produto {product.Name}. Estoque atual: {product.StockQuantity}.");
-//            }
+    [HttpPut("{id}")]
+    public async Task<ActionResult<Sale>> PutSale(int id, Sale sale)
+    {
+        if (id != sale.Id)
+        {
+            return BadRequest("O ID da URL não corresponde ao ID do corpo da requisição.");
+        }
 
-            
-//            product.StockQuantity -= item.Quantity;
+        try
+        {
+            var updatedSale = await _saleService.PutSaleAsync(id, sale);
+            return Ok(updatedSale);
+        }
+        catch (KeyNotFoundException ex)
+        {
+            return NotFound(ex.Message);
+        }
+        catch (Exception ex)
+        {
+            return BadRequest(ex.Message);
+        }
+    }
 
-            
-//            item.UnitPrice = product.Price;
-
-            
-//            sale.TotalAmount += item.Quantity * item.UnitPrice;
-//        }
-
-        
-//        _context.Sales.Add(sale);
-//        await _context.SaveChangesAsync();
-
-//        return Ok(sale); 
-//}
+    [HttpDelete("{id}")]
+    public async Task<IActionResult> DeleteSale(int id)
+    {
+        try
+        {
+            await _saleService.DeleteSaleAsync(id);
+            return NoContent();
+        }
+        catch (KeyNotFoundException ex)
+        {
+            return NotFound(ex.Message);
+        }
+        catch (Exception ex)
+        {
+            return BadRequest(ex.Message);
+        }
+    }
 }
